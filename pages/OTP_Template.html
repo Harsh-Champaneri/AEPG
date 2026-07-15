@@ -1,0 +1,606 @@
+<!doctype html>
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>AEPG – Verify Your Identity</title>
+    <style>
+      /* Client resets - many clients strip <style>, so critical rules are also inlined below */
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      img {
+        -ms-interpolation-mode: bicubic;
+        border: 0;
+        outline: none;
+        text-decoration: none;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .email-container {
+          width: 100% !important;
+        }
+        .fluid-padding {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+        .otp-box {
+          font-size: 30px !important;
+          letter-spacing: 8px !important;
+        }
+        .stack-col {
+          display: block !important;
+          width: 100% !important;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .dark-bg {
+          background-color: #0f172a !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4fa;
+      font-family: Arial, Helvetica, sans-serif;
+    "
+  >
+    <!-- Preheader (hidden preview text in inbox) -->
+    <div
+      style="
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        mso-hide: all;
+        font-size: 1px;
+        line-height: 1px;
+        color: #f0f4fa;
+      "
+    >
+      Your AEPG verification code expires in 10 minutes. Do not share this code
+      with anyone.
+    </div>
+
+    <!-- Outer wrapper table -->
+    <table
+      role="presentation"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="background-color: #f0f4fa"
+    >
+      <tr>
+        <td align="center" style="padding: 32px 16px">
+          <!-- Main email container -->
+          <table
+            role="presentation"
+            class="email-container"
+            width="600"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="
+              width: 600px;
+              max-width: 600px;
+              background-color: #ffffff;
+              border-radius: 16px;
+              overflow: hidden;
+              box-shadow: 0 4px 18px rgba(16, 24, 40, 0.08);
+            "
+          >
+            <!-- ════════ HEADER / BRAND BAR ════════ -->
+            <tr>
+              <td
+                style="
+                  background-color: #1565d8;
+                  background-image: linear-gradient(135deg, #0b63d6, #1554c7);
+                  padding: 28px 36px;
+                "
+              >
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                >
+                  <tr>
+                    <td align="left" valign="middle">
+                      <table
+                        role="presentation"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                      >
+                        <tr>
+                          <td valign="middle" style="padding-right: 10px">
+                            <!-- Logo mark: file icon rendered with a styled table cell since no image asset is available -->
+                            <table
+                              role="presentation"
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                              width="36"
+                              height="36"
+                              style="
+                                background-color: rgba(255, 255, 255, 0.16);
+                                border-radius: 9px;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  align="center"
+                                  valign="middle"
+                                  style="
+                                    color: #ffffff;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    font-family: Arial, sans-serif;
+                                  "
+                                >
+                                  &#128196;
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td valign="middle">
+                            <span
+                              style="
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 20px;
+                                font-weight: bold;
+                                color: #ffffff;
+                                letter-spacing: 0.2px;
+                              "
+                              >AEPG</span
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td align="right" valign="middle">
+                      <span
+                        style="
+                          font-family: Arial, Helvetica, sans-serif;
+                          font-size: 12px;
+                          font-weight: 600;
+                          color: rgba(255, 255, 255, 0.82);
+                          letter-spacing: 0.04em;
+                          text-transform: uppercase;
+                        "
+                        >Secure Verification</span
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ════════ HERO ICON + TITLE ════════ -->
+            <tr>
+              <td
+                align="center"
+                class="fluid-padding"
+                style="padding: 40px 36px 8px"
+              >
+                <!-- Shield icon circle -->
+                <table
+                  role="presentation"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  width="64"
+                  height="64"
+                  style="background-color: #e8f0fe; border-radius: 50%"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      valign="middle"
+                      style="font-size: 28px; line-height: 64px"
+                    >
+                      &#128274;
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td
+                align="center"
+                class="fluid-padding"
+                style="padding: 16px 36px 4px"
+              >
+                <h1
+                  style="
+                    margin: 0;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 22px;
+                    font-weight: 800;
+                    color: #0f172a;
+                    letter-spacing: -0.3px;
+                  "
+                >
+                  Verify Your Identity
+                </h1>
+              </td>
+            </tr>
+            <tr>
+              <td
+                align="center"
+                class="fluid-padding"
+                style="padding: 8px 36px 0"
+              >
+                <p
+                  style="
+                    margin: 0;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 14.5px;
+                    line-height: 1.6;
+                    color: #64748b;
+                  "
+                >
+                  Hello <strong style="color: #0f172a">{{USER_NAME}}</strong>,
+                  please use the one-time password (OTP) below to complete your
+                  verification on AEPG.
+                </p>
+              </td>
+            </tr>
+
+            <!-- ════════ OTP CODE BOX ════════ -->
+            <tr>
+              <td
+                align="center"
+                class="fluid-padding"
+                style="padding: 28px 36px 8px"
+              >
+                <table
+                  role="presentation"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  width="100%"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        background-color: #f0f6ff;
+                        border: 1.5px dashed #93c5fd;
+                        border-radius: 14px;
+                        padding: 24px 20px;
+                      "
+                    >
+                      <p
+                        style="
+                          margin: 0 0 10px;
+                          font-family: Arial, Helvetica, sans-serif;
+                          font-size: 11px;
+                          font-weight: 700;
+                          letter-spacing: 0.12em;
+                          text-transform: uppercase;
+                          color: #1565d8;
+                        "
+                      >
+                        Your Verification Code
+                      </p>
+                      <!-- The OTP itself -->
+                      <div
+                        class="otp-box"
+                        style="
+                          font-family:
+                            &quot;Courier New&quot;, Courier, monospace;
+                          font-size: 38px;
+                          font-weight: 800;
+                          color: #1565d8;
+                          letter-spacing: 12px;
+                          line-height: 1.2;
+                        "
+                      >
+                        {{OTP_CODE}}
+                      </div>
+                      <p
+                        style="
+                          margin: 14px 0 0;
+                          font-family: Arial, Helvetica, sans-serif;
+                          font-size: 13px;
+                          color: #64748b;
+                        "
+                      >
+                        <img
+                          src="https://img.icons8.com/ios-filled/14/64748b/time.png"
+                          width="12"
+                          height="12"
+                          alt=""
+                          style="vertical-align: middle; margin-right: 4px"
+                        />
+                        Expires in
+                        <strong style="color: #0f172a">10 minutes</strong>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ════════ DIVIDER ════════ -->
+            <tr>
+              <td class="fluid-padding" style="padding: 28px 36px 0">
+                <div
+                  style="
+                    border-top: 1px solid #e2e8f0;
+                    line-height: 1px;
+                    font-size: 1px;
+                  "
+                >
+                  &nbsp;
+                </div>
+              </td>
+            </tr>
+
+            <!-- ════════ SECURITY NOTICE ════════ -->
+            <tr>
+              <td class="fluid-padding" style="padding: 20px 36px 0">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                >
+                  <tr>
+                    <td
+                      style="
+                        background-color: #fffbeb;
+                        border: 1px solid #fde68a;
+                        border-radius: 10px;
+                        padding: 14px 16px;
+                      "
+                    >
+                      <table
+                        role="presentation"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                      >
+                        <tr>
+                          <td
+                            valign="top"
+                            style="padding-right: 10px; font-size: 15px"
+                          >
+                            &#9888;&#65039;
+                          </td>
+                          <td
+                            style="
+                              font-family: Arial, Helvetica, sans-serif;
+                              font-size: 13px;
+                              line-height: 1.55;
+                              color: #92400e;
+                            "
+                          >
+                            <strong>Never share this code.</strong> AEPG staff,
+                            faculty, or coordinators will never ask for your OTP
+                            over phone, email, or chat. If you didn't request
+                            this code, please ignore this email or contact
+                            support immediately.
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ════════ ACCOUNT / REQUEST DETAILS ════════ -->
+            <tr>
+              <td class="fluid-padding" style="padding: 22px 36px 0">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="border: 1px solid #e2e8f0; border-radius: 10px"
+                >
+                  <tr>
+                    <td
+                      style="
+                        padding: 14px 18px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 13px;
+                        color: #64748b;
+                        border-bottom: 1px solid #f1f5f9;
+                      "
+                    >
+                      Account Email
+                    </td>
+                    <td
+                      align="right"
+                      style="
+                        padding: 14px 18px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 13px;
+                        font-weight: 700;
+                        color: #0f172a;
+                        border-bottom: 1px solid #f1f5f9;
+                      "
+                    >
+                      <a
+                        href=""
+                        style="color: #0f172a !important; text-decoration: none"
+                        >{{USER_EMAIL}}</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="
+                        padding: 14px 18px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 13px;
+                        color: #64748b;
+                        border-bottom: 1px solid #f1f5f9;
+                      "
+                    >
+                      Requested On
+                    </td>
+                    <td
+                      align="right"
+                      style="
+                        padding: 14px 18px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 13px;
+                        font-weight: 700;
+                        color: #0f172a;
+                        border-bottom: 1px solid #f1f5f9;
+                      "
+                    >
+                      {{REQUEST_TIME}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="
+                        padding: 14px 18px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 13px;
+                        color: #64748b;
+                      "
+                    >
+                      Role
+                    </td>
+                    <td
+                      align="right"
+                      style="
+                        padding: 14px 18px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 13px;
+                        font-weight: 700;
+                        color: #0f172a;
+                      "
+                    >
+                      {{USER_ROLE}}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ════════ SPACER ════════ -->
+            <tr>
+              <td style="padding: 28px 0 0"></td>
+            </tr>
+
+            <!-- ════════ FOOTER ════════ -->
+            <tr>
+              <td
+                style="
+                  background-color: #0b63d6;
+                  background-image: linear-gradient(180deg, #0b63d6, #0a4fb5);
+                  padding: 26px 36px;
+                "
+              >
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                >
+                  <tr>
+                    <td align="center">
+                      <span
+                        style="
+                          font-family: Arial, Helvetica, sans-serif;
+                          font-size: 14px;
+                          font-weight: 800;
+                          color: #ffffff;
+                        "
+                        >AEPG</span
+                      >
+                      <br />
+                      <span
+                        style="
+                          font-family: Arial, Helvetica, sans-serif;
+                          font-size: 11.5px;
+                          color: rgba(255, 255, 255, 0.65);
+                        "
+                        >Automated Exam Paper Generator</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-top: 14px">
+                      <span
+                        style="
+                          font-family: Arial, Helvetica, sans-serif;
+                          font-size: 11.5px;
+                          color: rgba(255, 255, 255, 0.55);
+                          line-height: 1.6;
+                        "
+                      >
+                        This is an automated message — please do not reply
+                        directly to this email.<br />
+                        If you need help, contact us at
+                        <a
+                          href="mailto:support@aepg.edu"
+                          style="
+                            color: rgba(255, 255, 255, 0.85);
+                            text-decoration: none;
+                          "
+                          >aepg.support@gmail.com</a
+                        >
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-top: 16px">
+                      <span
+                        style="
+                          font-family: Arial, Helvetica, sans-serif;
+                          font-size: 11px;
+                          color: rgba(255, 255, 255, 0.4);
+                        "
+                      >
+                        &copy; {{CURRENT_YEAR}} AEPG. All rights reserved.
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- /email-container -->
+        </td>
+      </tr>
+    </table>
+    <!-- /outer wrapper -->
+  </body>
+</html>
