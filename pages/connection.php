@@ -2,11 +2,11 @@
 
 date_default_timezone_set('Asia/Kolkata');
 
-$server_name = "localhost";
-$user_name = "root";
+$server_name = "";
+$user_name = "";
 $password = "";         // Add your password
-$database_name = "de_project";
-$port = 3306;
+$database_name = "";
+$port = ;
 
 $connection = new mysqli($server_name, $user_name, $password, $database_name, $port);
 
