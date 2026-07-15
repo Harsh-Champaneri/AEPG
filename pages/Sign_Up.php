@@ -55,12 +55,12 @@ if (isset($_POST["Sign_Up_Btn"])) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'aepg.support@gmail.com';
-        $mail->Password = 'ypqx tzuh hxhu tqic';
+        $mail->Username = '';
+        $mail->Password = '';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
-        $mail->setFrom("aepg.support@gmail.com", "AEPG");
+        $mail->setFrom("", "");
         $mail->addAddress($email);
 
         $mail->isHTML(true);
