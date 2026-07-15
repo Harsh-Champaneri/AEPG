@@ -32,7 +32,6 @@ if (isset($_POST["submitBtn"])) {
         $insert_data->execute();
 
         $resetlink = "http://http://localhost/DE/AEPG_v2_frontend/pages/Reset_Password_Form.php?token=$token";
-        // $resetlink = "http://https://aepg.free.nf/pages/Reset_Password_Form.php?token=$token";
 
         $body = "Click the link below to reset your password:<br><br>Link - $resetlink<br><br>This link will expire in 15 minutes";
 
@@ -43,14 +42,14 @@ if (isset($_POST["submitBtn"])) {
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
 
-            $mail->Username   = 'aepg.support@gmail.com';
+            $mail->Username   = '';
 
-            $mail->Password   = 'ypqx tzuh hxhu tqic';
+            $mail->Password   = '';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = 465;
 
             //Recipients
-            $mail->setFrom("aepg.support@gmail.com", "AEGP Team");
+            $mail->setFrom("", "");
             $mail->addAddress($email, $dbrow["firstname"]);
 
             //Content
